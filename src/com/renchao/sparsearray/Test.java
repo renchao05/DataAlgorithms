@@ -1,0 +1,14 @@
+package com.renchao.sparsearray;
+
+
+public class Test {
+    public static void main(String[] args) {
+        String s = "1010100010111111110010001011111111001000101111111100100101001101110001110000011011101000111100101000101111111100110001001010011011100";
+        String k = "1010100010111111110010001011111111001000101111111100100101001101110001110000011011101000111100101000101111111100110001001010011011100";
+
+        StringBuilder ssssssss = new StringBuilder("ssssssss");
+        System.out.println(ssssssss);
+        ssssssss.delete(0,8);
+        System.out.println(ssssssss);
+    }
+}
