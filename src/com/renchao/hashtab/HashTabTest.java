@@ -24,14 +24,7 @@ class HashTab {
     public final EmpLinkedList[] linkedListArr;
     private final int size;
 
-    public Emp find(int id) {
-        return linkedListArr[hashFun(id)].find(id);
-    }
-
-    public boolean delete(int id) {
-        return linkedListArr[hashFun(id)].delete(id);
-    }
-
+    // 构造
     public HashTab(int size) {
         this.linkedListArr = new EmpLinkedList[size];
         this.size = size;
@@ -40,16 +33,30 @@ class HashTab {
         }
     }
 
+
+    // 查找
+    public Emp find(int id) {
+        return linkedListArr[hashFun(id)].find(id);
+    }
+
+    // 删除
+    public boolean delete(int id) {
+        return linkedListArr[hashFun(id)].delete(id);
+    }
+
+    // 添加
     public void add(Emp emp) {
         linkedListArr[hashFun(emp.id)].add(emp);
     }
 
+    // 打印输出
     public void list() {
         for (int i = 0; i < size; i++) {
             linkedListArr[i].list(i + 1);
         }
     }
 
+    // 根据id获取所在数组的索引
     public int hashFun(int id) {
         return id % size;
     }
@@ -58,6 +65,7 @@ class HashTab {
 class EmpLinkedList {
     public Emp head = null;
 
+    // 查找
     public Emp find(int id) {
         if (head == null)
             return null;
@@ -72,6 +80,7 @@ class EmpLinkedList {
         }
     }
 
+    // 删除
     public boolean delete(int id) {
         if (head == null)
             return false;
@@ -91,6 +100,7 @@ class EmpLinkedList {
         }
     }
 
+    // 添加
     public void add(Emp emp) {
         if (head == null) {
             head = emp;
@@ -102,6 +112,7 @@ class EmpLinkedList {
         temp.next = emp;
     }
 
+    // 打印输出
     public void list(int n) {
         if (head == null) {
             System.out.println(n + " 链表为空");
@@ -121,6 +132,7 @@ class EmpLinkedList {
 
 
 }
+
 
 class Emp {
     public int id;

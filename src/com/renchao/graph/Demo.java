@@ -1,6 +1,6 @@
 package com.renchao.graph;
 
-public class GraphTest {
+public class Demo {
     public static void main(String[] args) {
         Graph graph = new Graph(5);
         String[] str = {"A", "B", "C", "D", "E"};
@@ -14,7 +14,7 @@ public class GraphTest {
         graph.insertEdge(1,2,1);
 
         graph.showGraph();
-//        graph.dfs();
-        graph.bfs();
+//        graph.dfs(); // 深度优先遍历
+        graph.bfs();    // 广度优先遍历
     }
 }

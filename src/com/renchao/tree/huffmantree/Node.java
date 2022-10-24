@@ -1,4 +1,4 @@
-package com.renchao.huffmantree;
+package com.renchao.tree.huffmantree;
 
 
 public class Node implements Comparable<Node> {

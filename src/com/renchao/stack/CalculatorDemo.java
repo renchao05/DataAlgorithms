@@ -1,4 +1,4 @@
-package com.renchao.calculator;
+package com.renchao.stack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,10 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CalculatorTest {
+/**
+ * 计算器
+ */
+public class CalculatorDemo {
     public static void main(String[] args) {
 //        String str = "1 2 3 + 4 * + 5 -";
         String str = "(69*5+7)-6+1+((2+3)*4)-5";

@@ -1,4 +1,6 @@
-package com.renchao.huffmancode;
+package com.renchao.tree.huffmancode;
+
+import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,20 +11,35 @@ import java.util.*;
 public class HuffmanCode {
     private static final HashMap<Byte, String> huffmanCode = new HashMap<>();
 
-    public static void main(String[] args) {
+    /**
+     * 测试赫夫曼编码原理
+     */
+    @Test
+    public void testHuffmanCode() {
+        String content = "i like like like java do you like a java";
+        byte[] contentBytes = content.getBytes();
+        byte[] huffman = huffman(contentBytes);
+
+        System.out.println(Arrays.toString(huffman));
+        decode(huffmanCode,huffman);
+        System.out.println(huffmanCode);
+    }
+
+    /**
+     * 测试通过赫夫曼编码压缩文件
+     */
+    @Test
+    public void testHuffmanZip() {
         String in = "d:\\src.bmp";
         String out = "d:\\google22.zip";
         zipFile(in,out);
-//        String content = "i like like like java do you like a java";
-//        byte[] contentBytes = content.getBytes();
-//        byte[] huffman = huffman(contentBytes);
-//
-//        System.out.println(Arrays.toString(huffman));
-//        System.out.println(decode(huffmanCode,huffman));
-//        decode(huffmanCode,huffman);
-
     }
 
+    /**
+     * 文件压缩
+     * @param in
+     * @param out
+     */
     public static void zipFile(String in, String out) {
         byte[] file;
         FileInputStream fis = null;
@@ -45,6 +62,11 @@ public class HuffmanCode {
         }
     }
 
+    /**
+     * 解码
+     * @param huffmanCodes
+     * @param bytes
+     */
     public static void decode(Map<Byte, String> huffmanCodes, byte[] bytes) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < bytes.length - 1; i++) {
@@ -95,10 +117,8 @@ public class HuffmanCode {
         Node root = createHuffmanTree(list);
         //得到字符对应的赫夫曼编码huffmanCode
         getCodes(root);
-
         //把字符数组转为二进制编码返回
         return zip(bytes);
-
     }
 
     public static byte[] zip(byte[] bytes) {
@@ -114,6 +134,14 @@ public class HuffmanCode {
         }
         bs[k] = (byte) Integer.parseInt(str.substring(i), 2);
         return bs;
+    }
+
+    /**
+     * 获取哈夫曼编码
+     * @param root 哈夫曼树
+     */
+    public static void getCodes(Node root) {
+        getCodes(root, "", new StringBuilder());
     }
 
     /**
@@ -134,10 +162,12 @@ public class HuffmanCode {
         }
     }
 
-    public static void getCodes(Node root) {
-        getCodes(root, "", new StringBuilder());
-    }
 
+    /**
+     * 创建赫夫曼树
+     * @param list
+     * @return
+     */
     public static Node createHuffmanTree(List<Node> list) {
         while (list.size() > 1) {
             Collections.sort(list);

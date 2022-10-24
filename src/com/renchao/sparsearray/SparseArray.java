@@ -1,5 +1,8 @@
 package com.renchao.sparsearray;
 
+/**
+ * 稀疏数组
+ */
 public class SparseArray {
     public static void main(String[] args) {
         // 创建二维数值

@@ -5,7 +5,7 @@ import com.renchao.Utility;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LinkedStackTest {
+public class Demo {
     public static void main(String[] args) {
         String str = "(69*5+7)-6+1+((2+3)*4)-5";
         calculationFormula(str);
@@ -135,55 +135,4 @@ public class LinkedStackTest {
     }
 }
 
-class LinkedStack<T> {
-    public StackNode<T> head = new StackNode<>(null);
 
-    public boolean isNull() {
-        return head.next == null;
-    }
-
-    public T peek() {
-        return head.next.value;
-    }
-
-    public void push(T value) {
-        StackNode<T> sn = new StackNode<>(value);
-        sn.next = head.next;
-        head.next = sn;
-    }
-
-    public T pop() {
-        if (head.next == null) {
-//            System.out.println("栈空。。");
-            return null;
-        }
-        T value = head.next.value;
-        head.next = head.next.next;
-        return value;
-    }
-
-    public void show() {
-        StackNode<T> temp = head;
-        while (true) {
-            if (temp.next == null) {
-                return;
-            }
-            temp = temp.next;
-            System.out.println(temp);
-        }
-    }
-}
-
-class StackNode<T> {
-    public T value;
-    public StackNode<T> next;
-
-    @Override
-    public String toString() {
-        return "" + value;
-    }
-
-    public StackNode(T value) {
-        this.value = value;
-    }
-}

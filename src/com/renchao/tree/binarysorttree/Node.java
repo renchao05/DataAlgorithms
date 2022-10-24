@@ -1,9 +1,14 @@
-package com.renchao.binarysorttree;
+package com.renchao.tree.binarysorttree;
 
 public class Node {
     public int value;
     public Node left;
     public Node right;
+
+
+    public Node(int value) {
+        this.value = value;
+    }
 
     //左节点高度
     public int leftHeight() {
@@ -22,7 +27,6 @@ public class Node {
 
     //右旋转
     public void turnRight() {
-
         Node node = new Node(this.value);
         node.right = this.right;
         node.left = this.left.right;
@@ -33,7 +37,6 @@ public class Node {
 
     //左旋转
     public void turnLeft() {
-
         Node node = new Node(this.value);
         node.left = this.left;
         node.right = this.right.left;
@@ -181,27 +184,23 @@ public class Node {
         }
     }
 
-    public void inOrder() {
+    public void inorder() {
 
         if (this.left != null)
-            this.left.inOrder();
+            this.left.inorder();
         System.out.print(this);
         if (this.right != null)
-            this.right.inOrder();
+            this.right.inorder();
     }
 
-    public void preOrder() {
+    public void preorder() {
         System.out.print(this);
         if (this.left != null)
-            this.left.preOrder();
+            this.left.preorder();
         if (this.right != null)
-            this.right.preOrder();
+            this.right.preorder();
     }
 
-
-    public Node(int value) {
-        this.value = value;
-    }
 
     @Override
     public String toString() {

@@ -1,23 +1,13 @@
-package com.renchao.binarysorttree;
-
-import com.renchao.tree.Hero;
+package com.renchao.tree.binarysorttree;
 
 public class BinarySortTree {
     private Node root;
-
-    public void sssss() {
-        System.out.println(root.left.height());
-        System.out.println(root.right.height());
-    }
-
 
     public boolean delete(int value) {
         if (root == null) {
             System.out.println("空树，没有数据");
             return false;
         }
-
-        //开始删除根节点======================
         if (root.value == value) {
             if (root.left == null && root.right == null) {
                 root = null;    //简单处理，整个节点删除
@@ -41,8 +31,6 @@ public class BinarySortTree {
             root = temp;
             return true;
         }
-        //======================
-
         return root.delNode(value);
     }
 
@@ -61,7 +49,7 @@ public class BinarySortTree {
             System.out.println("树是空的。。");
             return;
         }
-        root.preOrder();
+        root.preorder();
     }
 
     public void inOrder() {
@@ -69,7 +57,7 @@ public class BinarySortTree {
             System.out.println("树是空的。。");
             return;
         }
-        root.inOrder();
+        root.inorder();
     }
 
     public Node getRoot() {

@@ -1,4 +1,4 @@
-package com.renchao.binarysorttree;
+package com.renchao.tree.binarysorttree;
 
 public class AVLTreeTest {
     public static void main(String[] args) {
