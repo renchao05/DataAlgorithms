@@ -1,4 +1,4 @@
-package com.renchao.DynamicProgramming;
+package com.renchao.algorithm_10.DynamicProgramming;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.renchao.hanoi_dca;
+package com.renchao.algorithm_10.hanoi_dca;
 
 public class HanoiTower {
     public static void main(String[] args) {

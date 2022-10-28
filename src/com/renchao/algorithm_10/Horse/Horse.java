@@ -1,4 +1,4 @@
-package com.renchao.Horse;
+package com.renchao.algorithm_10.Horse;
 
 
 import java.awt.*;

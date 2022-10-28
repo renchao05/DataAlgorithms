@@ -1,4 +1,4 @@
-package com.renchao.binarysearch;
+package com.renchao.algorithm_10.binarysearch;
 
 /**
  * 二分查找，非递归

@@ -1,4 +1,4 @@
-package com.renchao.Greedy;
+package com.renchao.algorithm_10.Greedy;
 
 import java.util.*;
 

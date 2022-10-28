@@ -1,4 +1,4 @@
-package com.renchao.kmp;
+package com.renchao.algorithm_10.kmp;
 
 import java.util.Arrays;
 

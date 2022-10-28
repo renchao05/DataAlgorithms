@@ -1,4 +1,4 @@
-package com.renchao.Kruskal;
+package com.renchao.algorithm_10.Kruskal;
 
 import java.util.Arrays;
 

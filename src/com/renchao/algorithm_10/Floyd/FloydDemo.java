@@ -1,8 +1,5 @@
-package com.renchao.Floyd;
+package com.renchao.algorithm_10.Floyd;
 
-import com.renchao.Dijkstra.Graph;
-
-import java.util.Arrays;
 
 public class FloydDemo {
     public static void main(String[] args) {

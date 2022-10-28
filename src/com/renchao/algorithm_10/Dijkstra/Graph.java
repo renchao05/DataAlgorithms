@@ -1,4 +1,4 @@
-package com.renchao.Dijkstra;
+package com.renchao.algorithm_10.Dijkstra;
 
 import java.util.Arrays;
 

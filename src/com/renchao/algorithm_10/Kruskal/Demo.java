@@ -1,4 +1,4 @@
-package com.renchao.Kruskal;
+package com.renchao.algorithm_10.Kruskal;
 
 public class Demo {
     private static final int INF = KruskalCase.INF;

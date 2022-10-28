@@ -1,4 +1,4 @@
-package com.renchao.Prim;
+package com.renchao.algorithm_10.Prim;
 
 import java.util.Arrays;
 

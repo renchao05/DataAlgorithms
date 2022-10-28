@@ -1,4 +1,4 @@
-package com.renchao.Floyd;
+package com.renchao.algorithm_10.Floyd;
 
 import java.util.Arrays;
 
